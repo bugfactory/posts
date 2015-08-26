@@ -6,7 +6,7 @@ Hoje em dia muito se fala em docker no mundo nerd, de fato essa é uma das tecno
 
 Pensando nisso, resolvemos criar uma sequência de posts para tentar cobrir esse assunto da melhor forma possível. Nesse primeiro post tentaremos tirar a maioria das dúvidas, apresentando os principais conceitos, como instalar e administrar um ambiente docker.
 
-Espero que vocês aproveitem o conteúdo deste post e em caso de dúvidas, sugestões ou reclamações você será ignorado, hehehe brincadeira, deixe um comentário que tentaremos responder o mais rápido possível.
+Espero que vocês aproveitem o conteúdo deste post e em caso de dúvidas, sugestões ou reclamações deixe um comentário que tentaremos responder o mais rápido possível.
 
 ## Um pouco da história
 
