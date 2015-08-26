@@ -241,6 +241,8 @@ $ docker push patito/ubuntu-nginx
 
 Se você fizer o login no docker hub você podera ver a sua nova imagem.
 
+![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/ubuntu-nginx.png)
+
 O comando search eh utilizado para procurar as imagens que estao disponiveis no docker hub. Digite o comando abaixo e veja o resultado.
 
 ```
