@@ -164,6 +164,8 @@ static void _person_destroy(Person *obj)
 
 ## Main function
 
+Now let's use our functions and see if this technique really works.
+
 ```c
 #include <stdio.h>
 
