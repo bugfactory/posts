@@ -1,12 +1,12 @@
 # Reference Counting
 
-I wrote this lonnng time ago and now I just have translated it.
+I wrote this a lonnng time ago and now I have just translated it.
 
 "Memory management? Why? Hardware is cheap, I won't release the memory". 
 "I'm crazy life, I make popcorn without a lid and I don't release the memory". 
 "Do you only release the memory to impress intern?". If you think like that,
-you are like me and you can go watch The Big Bang Theory. But for those are
-too square and like a safe life we I will show a different solution.
+you are like me and you can go watch The Big Bang Theory. But for those who are
+too square and like a safe life I will show a different solution.
 
 The memory management is one of the biggest  headaches for C developers, do this task manually 
 using *malloc()* and *free()* works, but if you forget a *free()* you may cause a memory leak,
@@ -20,13 +20,13 @@ internal counter of the object. This counter starts in 1 (one) when the object i
 If the developer wants to use the object, he calls the “ref” method, this way the internal
 counter will be increased in one, if the developer doesn't need the object anymore, he has
 to call “unref” method and the internal counter will be decreased in one. When the internal
-counter is zero this means that the object is not being used and the memory can be released.
+counter is zero means that the object is not being used and the memory can be released.
 
 ## Example
 
 Let’s create an example to show how this technique works. We gonna create a Person object that contains name,
 surname and age. This is just an example, so don’t worry about variable names or error handling, the idea
-here is to show the concept of reference counting. To this example we gonna implement this methods:
+here is to show the concept of reference counting. In our example we gonna implement these methods:
 
  - person_new(): Responsible to create a new Person;
  - _person_destroy(): Static method responsible to release the memory;
@@ -139,7 +139,7 @@ void person_unref(Person *obj)
 
 ## Releasing the memory
 
-This static method is the really responsible for releasing the memory. We call this method inside of 
+This static method is the real responsible for releasing the memory. We call this method inside of 
 *person_ref()*. Look the code below that we are using *free()* function.
 
 ```c
@@ -164,7 +164,7 @@ static void _person_destroy(Person *obj)
 
 ## Main function
 
-Now let's use our functions and see if this technique really works.
+Now let's use our functions and see if the technique really works.
 
 ```c
 #include <stdio.h>
@@ -191,7 +191,7 @@ int main()
 ```
 ## Makefile
 
-Year, I know you are lazy, because of this I did a Makefile. :D
+Yeah, because I know you are lazy, I did a Makefile. :D
 
 ```c
 CC      := gcc
