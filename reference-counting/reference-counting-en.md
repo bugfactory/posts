@@ -2,8 +2,8 @@
 
 I wrote this lonnng time ago and now I just have translated it.
 
-"Memory management? Why? Hardware is cheap, I wont release the memory". 
-"I'm crazy life, I make popcorn without a lid and I don’t release the memory". 
+"Memory management? Why? Hardware is cheap, I won't release the memory". 
+"I'm crazy life, I make popcorn without a lid and I don't release the memory". 
 "Do you only release the memory to impress intern?". If you think like that,
 you are like me and you can go watch The Big Bang Theory. But for those are
 too square and like a safe life we I will show a different solution.
