@@ -21,6 +21,8 @@ Desde a versão 0.9 o docker utiliza a biblioteca libcontainer para fazer acesso
 
 A figura acima deixa claro que o Docker consegue utilizar as features de virtualização do kernel utilizando diferentes interfaces.
 
+## Container vs Virtual Machines
+
 ## Docker Container
 
 Todo Docker Container é criado a partir de uma Imagem, e o seu ciclo de vida consiste na execução de um processo, ou seja, enquanto esse processo estiver em execução o container também estará. Quando esse processo for finalizado o container também será. 
