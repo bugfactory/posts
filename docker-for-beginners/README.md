@@ -15,6 +15,7 @@ Docker começou a ser desenvolvido por Solomon Hykes e outros engenheiros da emp
 Eh muito comum artigos sobre docker fazerem associacao com outro conceito, Linux Container (LXC). Caso você não saiba, LXC é um maneira de virtualização a nível do sistema operacional e é utilizado para executar vários sistemas Linux isoladamente, para isso ele faz uso de features do kernel tais como cgroups e namespaces. Esses ambientes isolados são os conhecidos containers. O cgroups é uma feature do kernel que possibilita o compartilhamento de recursos tais como: CPU, memória do sistema e rede. O namespace cria um isolamento para os containers, em outras palavras ele  garante que um container não pode ver ou afetar outro.
 
 O conceito de cgroups e namespaces é muito mais complexo do que foi citado acima. Porém, o nosso propósito não é entrar afundo nesses conceitos, mas sim, mostrar a ferramenta docker, que usa ambas features. Caso você tenha curiosidade de conhecer mais sobre essas features, uma rápida pesquisa na internet te trará ótimos papers.
+
 Desde a versão 0.9 o docker utiliza a biblioteca libcontainer para fazer acesso as features de virtualização do kernel, porem ele também é compatível com a libvirt, LXC ou systemd-nspwan.
 
 ![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/lxc-docker.png)
