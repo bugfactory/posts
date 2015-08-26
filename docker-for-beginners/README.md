@@ -17,7 +17,7 @@ Eh muito comum artigos sobre docker fazerem associacao com outro conceito, Linux
 O conceito de cgroups e namespaces é muito mais complexo do que foi citado acima. Porém, o nosso propósito não é entrar afundo nesses conceitos, mas sim, mostrar a ferramenta docker, que usa ambas features. Caso você tenha curiosidade de conhecer mais sobre essas features, uma rápida pesquisa na internet te trará ótimos papers.
 Desde a versão 0.9 o docker utiliza a biblioteca libcontainer para fazer acesso as features de virtualização do kernel, porem ele também é compatível com a libvirt, LXC ou systemd-nspwan.
 
-![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/lxc-docker.png)
+->![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/lxc-docker.png)<-
 
 A figura acima deixa claro que o Docker consegue utilizar as features de virtualização do kernel utilizando diferentes interfaces.
 
