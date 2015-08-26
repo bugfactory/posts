@@ -211,4 +211,4 @@ clean:
                 $(RM) $(BIN) $(OBJ) *.o $(LIB)
 ```
 
-I hope you enjoyed and let me know if I did something wrong.
+Reference counting is really nice because the developers don't have to manage *malloc()*, *free()* and pointers. We create an abstraction. I hope you enjoyed and let me know if I did something wrong.
