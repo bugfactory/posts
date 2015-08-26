@@ -1,6 +1,6 @@
 # Docker for Beginners
 
-![alt tag](https://github.com/bugfactory/posts/docker-for-beginners/imgs/docker.png)
+![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/docker.png)
 
 Hoje em dia muito se fala em docker no mundo nerd, de fato essa é uma das tecnologias que estão em alta no mercado, todos os dias novas empresas estão aderindo ao docker. Esta ferramenta se tornou um conhecimento quase obrigatório para desenvolvedores e systems adminstrators.
 
