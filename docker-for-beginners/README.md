@@ -23,6 +23,8 @@ A figura acima deixa claro que o Docker consegue utilizar as features de virtual
 
 ## Container vs Virtual Machines
 
+![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/docker-containers-vms.png)
+
 ## Docker Container
 
 Todo Docker Container é criado a partir de uma Imagem, e o seu ciclo de vida consiste na execução de um processo, ou seja, enquanto esse processo estiver em execução o container também estará. Quando esse processo for finalizado o container também será. 
