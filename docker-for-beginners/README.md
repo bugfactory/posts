@@ -24,6 +24,8 @@ A figura acima deixa claro que o Docker consegue utilizar as features de virtual
 
 ## Container vs Virtual Machines
 
+Uma maquina virtual eh muito mais custoso que um container, isso eh fato. Isso ocorre porque quando voce cria uma maquina virtual voce precisa de um kernel, libs e binarios. Enquanto um container usa libs e kernel do host. Entao usar o docker eh melhor que uma maquina virtual? Nao. A resposta para sua pergunta depende muito do seu problema.
+
 ![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/docker-containers-vms.png)
 
 ## Docker Container
