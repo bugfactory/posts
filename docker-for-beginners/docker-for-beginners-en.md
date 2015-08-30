@@ -38,3 +38,9 @@ is faster and lighter than a virtual machine.
 The concept of cgroups and namespaces is much more complex than mentioned above. But our purpose is not
 to go deeper in these concepts, but rather show docker tool, which uses both features. If you have
 curiosity to know more about these them, a quick search on the internet will bring you great papers.
+
+## A bit of history
+
+The Docker development started by Solomon Hykes and others engineers at dotCloud. At the beginning it was just an internal project to handle Linux Containers (LXC), then the developers realized the power they had in hand and they decided to open the project.
+
+
