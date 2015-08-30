@@ -13,4 +13,7 @@ questions, showing the main concepts, how to install and administrate a docker e
 I hope you enjoy the content of this post and if you have questions, sugestions or complains,
 just leave a comment and we’ll try to answer as soon as possible.
 
-# Basic Concepts
+## Basic Concepts
+
+Before we start talking about Docker we have to keep in mind concepts such as: 
+Linux Containers (LXC) and Virtual Machines (VMs). They always appear in papers related to docker.
