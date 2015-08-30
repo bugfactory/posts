@@ -41,6 +41,20 @@ curiosity to know more about these them, a quick search on the internet will bri
 
 ## A bit of history
 
-The Docker development started by Solomon Hykes and others engineers at dotCloud. At the beginning it was just an internal project to handle Linux Containers (LXC), then the developers realized the power they had in hand and they decided to open the project.
+The Docker development started by Solomon Hykes and others engineers at dotCloud. At the beginning it
+was just an internal project to handle Linux Containers (LXC), then the developers realized the power
+they had in hand and they decided to open the project.
+
+So, what is docker? “Docker containers wrap up a piece of software in a complete filesystem that 
+contains everything it needs to run: code, runtime, system tools, system libraries – anything you
+can install on a server. This guarantees that it will always run the same, regardless of the 
+environment it is running in.” (docker.com)
+
+Although in the begging Docker used to make use of LXC to access the kernel’s virtualization features,
+since version 0.9, the tool uses libcontainer library which was developed by Docker company using Go
+language to do the same. Also Docker is still compatible with other interfaces (libvirt, LXC,
+systemd-nspwan). As shown in the figure below.
+
+![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/lxc-docker.png)
 
 
