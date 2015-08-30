@@ -12,3 +12,5 @@ questions, showing the main concepts, how to install and administrate a docker e
 
 I hope you enjoy the content of this post and if you have questions, sugestions or complains,
 just leave a comment and we’ll try to answer as soon as possible.
+
+# Basic Concepts
