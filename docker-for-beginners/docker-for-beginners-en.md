@@ -6,7 +6,9 @@ Nowadays there is a lot of talk around docker in the geek world, indeed,
 this technology is increasing and every day new companies are embrancing it.
 Docker became almost a required knowledge for developers and sysadmins.
 
-Thinking about it, we want to create a sequence of posts about it and
-try to cover this subject in the best way possible. In this first post we
-want to clarify the basic questions, showing the main concepts, how to
-install and administrate a docker environment.
+Thinking about it, we want to create a sequence of posts to try to cover
+the subject in the best way. In this first post we want to answer the basic
+questions, showing the main concepts, how to install and administrate a docker environment.
+
+I hope you enjoy the content of this post and if you have questions, sugestions or complains,
+just leave a comment and we’ll try to answer as soon as possible.
