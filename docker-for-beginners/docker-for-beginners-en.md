@@ -35,3 +35,6 @@ is faster and lighter than a virtual machine.
 
 ![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/docker-containers-vms.png)
 
+The concept of cgroups and namespaces is much more complex than mentioned above. But our purpose is not
+to go deeper in these concepts, but rather show docker tool, which uses both features. If you have
+curiosity to know more about these them, a quick search on the internet will bring you great papers.
