@@ -132,6 +132,94 @@ $ docker run hello-world
 
 ## Starting with Docker
 
+Probably, after the download you have only the test image hello-world installed in you computer.
+With the command docker images you can see your images.
+
+```
+$ docker images
+
+REPOSITORY        TAG        IMAGE ID          CREATED       VIRTUAL SIZE
+hello-world     latest     af340544ed62      2 weeks ago       960 B
+```
+
+To download another image you can use command pull.
+
+```
+$ docker pull centos
+
+Using default tag: latest
+latest: Pulling from library/centos
+f1b10cd84249: Pull complete 
+c852f6d61e65: Pull complete 
+7322fbe74aa5: Pull complete 
+Digest: sha256:90305c9112250c7e3746425477f1c4ef112b03b4abe78c612e092037bfecc3b7
+Status: Downloaded newer image for centos:latest
+```
+
+Now if you execute the command docker image again, it will be possible to see the new
+image that we downloaded from centos.
+
+```
+$ docker images
+
+REPOSITORY        TAG        IMAGE ID          CREATED       VIRTUAL SIZE
+hello-world     latest     af340544ed62      2 weeks ago       960 B
+centos          latest     7322fbe74aa5      9 weeks ago       172.2 MB
+```
+
+To execute a container with an image is necessary to use the command run, and if this image
+do not exist in your computer, docker will download it automaticaly for you.
+
+The command below will build and execute a container with debian image. The options “i” and “t” are
+usually combined to execute a process in an interactive way, like it was a shell.
+
+```
+$ docker run -i -t debian:8 /bin/bash
+```
+
+The command docker ps allows you to see all the containers that are running.
+
+```
+$ docker ps
+CONTAINER ID    IMAGE     COMMAND      CREATED   STATUS   PORTS      NAMES
+cf52245c4c32   debian:8  "/bin/bash"  5 min ago  Up 5 min      desperate_mccarthy 
+```
+
+To make a container to stop running the command stop is used, it necessary to say the
+cointainer’s ID. Notice on the docker ps command there is a column called CONTAINER ID. 
+
+```
+$ docker stop cf52245c4c32
+cf52245c4c32
+```
+
+If a stop command exists, a start command probably does as well, right?
+
+```
+$ docker start cf52245c4c32
+cf52245c4c32
+```
+
+Now that our container is up again, it is possible to connect to it using `attach` command.
+
+```
+$ docker attach cf52245c4c32
+root@cf52245c4c32:/# 
+```
+
+If you don’t want an image anymore, it is possible to remove an image using `rmi` command.
+
+```
+$ docker rmi -f <IMAGE-ID>
+```
+
+Remember, your best friend is the help command.
+
+```
+$ docker <COMMAND> help
+```
+
+
 ## Publishing your images
 
 ## References
