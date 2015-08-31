@@ -93,7 +93,7 @@ but first you have to be registered into it.
 ## How to install
 
 To install it is not complicated, and it is possible to find a variaety of articles teaching how 
-to do it in the distribuition you like more. Just be aware about the ???????, such as:
+to do it in the distribuition you like more. Just be aware about the requeriments, such as:
 
  - 64-bit installation regardless of your distribution version
  - kernel must be 3.10 at minimum
