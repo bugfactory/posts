@@ -90,4 +90,43 @@ Docker Company provides a service of public registration, where users are able t
 known as Docker Hub. Further we will show how to download, change and publish a image in docker hub,
 but first you have to be registered into it.
 
+## How to install
+
+To install it is not complicated, and it is possible to find a variaety of articles teaching how 
+to do it in the distribuition you like more. Just be aware about the ???????, such as:
+
+ - 64-bit installation regardless of your distribution version
+ - kernel must be 3.10 at minimum
+
+The linux distribution used in this post was ubuntu 14.10. If you have an old kernel version I
+advise to read at docker website.
+
+To install docker we will need curl package.
+
+```
+$ sudo apt-get install curl
+```
+
+Now we can install Docker.
+
+```
+$ curl -sSL https://get.docker.com/ |sh
+```
+
+Look this message when we finished docker installation: *“If you would like to use Docker as a
+non-root user, you should now consider adding your user to the "docker" group with something like”.*
+
+```
+$ usermod -aG docker <YOUR-USERNAME>
+```
+
+Remember that you will have to log out and back in for this to take effect!
+
+Docker offers one test image that can be used to verify if the installation happened correctly.
+The name of it could not be different, “hello-world”. When you execute the command below you
+will be downloading the image and executing it in one container. 
+
+```
+$ docker run hello-world
+```
 
