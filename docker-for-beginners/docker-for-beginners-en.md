@@ -19,8 +19,8 @@ Before we start talking about Docker we have to keep in mind concepts such as:
 Linux Containers (LXC) and Virtual Machines (VMs). They always appear in papers related to docker.
 
 The technology companies started adopting virtual machines a long time ago and I believe that
-is not a new concept for you. Moreover with the growth of Docker and LXC emerged questions such
-as: What is LXC? What is the difference between virtual machines and linux containers?
+is not a new concept for you. Moreover with the growth of Docker and LXC some questions emerged.
+What is LXC? What is the difference between virtual machines and linux containers?
 
 LXC is a virtualization in operating system level, it is used to run multiple isolated Linux systems,
 it makes use of kernel features such as cgroups and namespaces. These isolated environments are known
