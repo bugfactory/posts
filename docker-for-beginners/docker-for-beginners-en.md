@@ -57,4 +57,21 @@ systemd-nspwan). As shown in the figure below.
 
 ![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/lxc-docker.png)
 
+## Docker Container
+
+Every Docker Container is built from an image, and its life cycle consists in the execution of a process,
+thus while this process is running, the container also will run.
+
+One container can run more than one process, but it isn’t a good practice. This concept is important to
+understand how to “Dockerize” your application.
+
+[“In almost all cases, you should only run a single process in a single container. Decoupling applications
+into multiple containers makes it much easier to scale horizontally and reuse containers. If that service
+depends on another service, make use of container linking.”](https://docs.docker.com/articles/dockerfile_best-practices/)
+
+
+## Docker Image
+
+## Docker Registry and Docker Hub
+
 
