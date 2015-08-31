@@ -275,6 +275,26 @@ You should access the page of welcome to nginx.
 
 ![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/nginx.png)
 
+```
+$ docker push patito/ubuntu-nginx
+```
+
+You can login at docker hub and see your new image.
+
+![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/ubuntu-nginx.png)
+
+If you want to search images at docker hub, you can use command `search`.
+
+```
+$ docker search centos
+```
+
+To do the logout from docker hub use the `logout` command.
+
+```
+$ docker logout
+Remove login credentials for https://index.docker.io/v1/
+```
 
 ## References
 
