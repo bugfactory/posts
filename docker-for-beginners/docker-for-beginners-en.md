@@ -7,20 +7,19 @@ this technology is increasing and every day new companies are embrancing it.
 Docker became almost a required knowledge for developers and sysadmins.
 
 Thinking about it, we want to create a sequence of posts to try to cover
-the subject in the best way. In this first post we want to answer the basic
+the subject in the best way. In this first post we would like to answer the basic
 questions, showing the main concepts, how to install and administrate a docker environment.
 
-I hope you enjoy the content of this post and if you have questions, sugestions or complains,
+I hope you enjoy the content of this text and if you have questions, sugestions or complains,
 just leave a comment and we’ll try to answer as soon as possible.
 
 ## Basic Concepts
 
-Before we start talking about Docker we have to keep in mind concepts such as: 
+Before we start talking about Docker we have to keep in mind two basic concepts: 
 Linux Containers (LXC) and Virtual Machines (VMs). They always appear in papers related to docker.
 
-The technology companies started adopting virtual machines a long time ago and I believe that
-is not a new concept for you. Moreover with the growth of Docker and LXC some questions emerged.
-What is LXC? What is the difference between virtual machines and linux containers?
+Technology companies started adopting virtual machines a long time ago and I believe that
+is not a new concept for you. But what is LXC? What is the difference between virtual machines and linux containers?
 
 LXC is a virtualization in operating system level, it is used to run multiple isolated Linux systems,
 it makes use of kernel features such as cgroups and namespaces. These isolated environments are known
@@ -30,8 +29,8 @@ see or impact another.
 
 When we build a virtual machine we have a complete system, with its own libraries, kernel and binary.
 It means that we have a copy of a isolated physical machine. However LXC works in a different way,
-because it uses the hosts’ resource, such as: libs, kernel and binaries. As a result to build a container
-is faster and lighter than a virtual machine.
+because it uses the hosts’ resource, such as: libs, kernel and binaries. As a result, to build a container
+is faster, and lighter than a virtual machine.
 
 ![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/docker-containers-vms.png)
 
@@ -87,19 +86,19 @@ That is the reason docker registry exists, it is an open source project which al
 share and manage your images in docker (in-house registry).
 
 Docker Company provides a service of public registration, where users are able to save their images,
-known as Docker Hub. Further we will show how to download, change and publish a image in docker hub,
+known as Docker Hub. Further we will show how to download, change and publish an image in docker hub,
 but first you have to be registered into it.
 
 ## How to install
 
-To install it is not complicated, and it is possible to find a variaety of articles teaching how 
-to do it in the distribuition you like more. Just be aware about the requeriments, such as:
+To install it is not complicated, and it is possible to find a variety of articles teaching how 
+to do it in the distribuition you like the most. Just be aware of the requeriments, such as:
 
  - 64-bit installation regardless of your distribution version
  - kernel must be 3.10 at minimum
 
 The linux distribution used in this post was ubuntu 14.10. If you have an old kernel version I
-advise to read at docker website.
+advise you to read at docker website.
 
 To install docker we will need curl package.
 
@@ -113,7 +112,7 @@ Now we can install Docker.
 $ curl -sSL https://get.docker.com/ |sh
 ```
 
-Look this message when we finished docker installation: *“If you would like to use Docker as a
+We will see this message when we finished docker installation: *“If you would like to use Docker as a
 non-root user, you should now consider adding your user to the "docker" group with something like”.*
 
 ```
@@ -132,7 +131,7 @@ $ docker run hello-world
 
 ## Starting with Docker
 
-Probably, after the download you have only the test image hello-world installed in you computer.
+Sfter the download you probably have only the test image hello-world installed in you computer.
 With the command docker images you can see your images.
 
 ```
@@ -142,7 +141,7 @@ REPOSITORY        TAG        IMAGE ID          CREATED       VIRTUAL SIZE
 hello-world     latest     af340544ed62      2 weeks ago       960 B
 ```
 
-To download another image you can use command pull.
+To download another image you can use the command pull.
 
 ```
 $ docker pull centos
@@ -168,7 +167,7 @@ centos          latest     7322fbe74aa5      9 weeks ago       172.2 MB
 ```
 
 To execute a container with an image is necessary to use the command run, and if this image
-do not exist in your computer, docker will download it automaticaly for you.
+do not exist in your computer, docker will download it automatically for you.
 
 The command below will build and execute a container with debian image. The options “i” and “t” are
 usually combined to execute a process in an interactive way, like it was a shell.
@@ -185,7 +184,7 @@ CONTAINER ID    IMAGE     COMMAND      CREATED   STATUS   PORTS      NAMES
 cf52245c4c32   debian:8  "/bin/bash"  5 min ago  Up 5 min      desperate_mccarthy 
 ```
 
-To make a container to stop running the command stop is used, it necessary to say the
+To make a container to stop running the command stop is used, it is necessary to say the
 cointainer’s ID. Notice on the docker ps command there is a column called CONTAINER ID. 
 
 ```
@@ -193,7 +192,7 @@ $ docker stop cf52245c4c32
 cf52245c4c32
 ```
 
-If a stop command exists, a start command probably does as well, right?
+If a stop command exists, a start command does as well, right?
 
 ```
 $ docker start cf52245c4c32
@@ -221,8 +220,8 @@ $ docker <COMMAND> help
 
 ## Publishing your images
 
-Until this moment we only use imagens available at docker hub. Now we will learn how to change,
-commit and publish an image. Just to remember, you have to be registered at docker hub.
+Until now we used images available at docker hub. It is time to learn how to change,
+commit and publish an image. Just to remind, you have to be registered at docker hub.
 
 Let’s download ubuntu image and install nginx.
 
@@ -234,7 +233,7 @@ root@281b3fcf24f2:/# apt-get install nginx
 
 We can verify the image changes using `diff` command. To leave the container
 without killing it you have to press: **ctrl + p + q**. Using command `ps` we can 
-see the container is still running.
+see the container that is still running.
 
 ```
 $ docker diff 281b3fcf24f2
@@ -248,7 +247,7 @@ $ docker commit b15765f0448b patito/ubuntu-nginx
 6b5522a3b94dcd25d3b4afb84b5069008bc69643fc69fae9ea6254be909c904e
 ```
 
-Now let’s login at docker hub.
+Let’s login at docker hub.
 
 ```
 $ docker login
@@ -259,7 +258,7 @@ WARNING: login credentials saved in /home/patito/.docker/config.json
 Login Succeeded
 ```
 
-Now our changes are saved at patito/ubuntu-nginx. Let’s run this image and export port 80.
+Our changes have been saved at patito/ubuntu-nginx. Let’s run this image and export port 80.
 The port 8080 will be running at the host and the port 80 will be running at the container.
 Remember to start nginx.
 
