@@ -69,9 +69,25 @@ understand how to “Dockerize” your application.
 into multiple containers makes it much easier to scale horizontally and reuse containers. If that service
 depends on another service, make use of container linking.”](https://docs.docker.com/articles/dockerfile_best-practices/)
 
-
 ## Docker Image
 
+They are read-only templates used to build containers. For instance, an Image would be the
+operational system ubuntu with a web server installed. The Image is characterized as read-only
+because from the moment you change it, it becomes another image. This concept will be more
+easily to understand when we start using Docker in the command line.
+
 ## Docker Registry and Docker Hub
+
+Imagine the following scenario: you work as a sysadmin in a company that is adopting Docker technology.
+Inside this environment, developers want to manipulate and share many images, based in different
+distributions and running different applications. They are creating new images and updating the ones
+that already exist all the time. Also, these images must be private. How to manage such task?
+
+That is the reason docker registry exists, it is an open source project which allows you to save,
+share and manage your images in docker (in-house registry).
+
+Docker Company provides a service of public registration, where users are able to save their images,
+known as Docker Hub. Further we will show how to download, change and publish a image in docker hub,
+but first you have to be registered into it.
 
 
