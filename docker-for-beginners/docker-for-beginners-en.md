@@ -219,8 +219,61 @@ Remember, your best friend is the help command.
 $ docker <COMMAND> help
 ```
 
-
 ## Publishing your images
+
+Until this moment we only use imagens available at docker hub. Now we will learn how to change,
+commit and publish an image. Just to remember, you have to be registered at docker hub.
+
+Let’s download ubuntu image and install nginx.
+
+```
+$ docker run -i -t ubuntu:14.10 /bin/bash
+root@281b3fcf24f2:/# apt-get update
+root@281b3fcf24f2:/# apt-get install nginx
+```
+
+We can verify the image changes using `diff` command. To leave the container
+without killing it you have to press: **ctrl + p + q**. Using command `ps` we can 
+see the container is still running.
+
+```
+$ docker diff 281b3fcf24f2
+```
+
+The command result will show us everything we changed, add or removed. To save this
+modifications in the image we have to use the `commit` command.
+
+```
+$ docker commit b15765f0448b patito/ubuntu-nginx
+6b5522a3b94dcd25d3b4afb84b5069008bc69643fc69fae9ea6254be909c904e
+```
+
+Now let’s login at docker hub.
+
+```
+$ docker login
+Username: 
+Password: 
+Email: benatto@gmail.com
+WARNING: login credentials saved in /home/patito/.docker/config.json
+Login Succeeded
+```
+
+Now our changes are saved at patito/ubuntu-nginx. Let’s run this image and export port 80.
+The port 8080 will be running at the host and the port 80 will be running at the container.
+Remember to start nginx.
+
+```
+$ docker run -i -t -p 8080:80 patito/ubuntu-nginx /bin/bash
+root@68246cddc002:/# service nginx start
+root@68246cddc002:/# ps aux
+```
+
+With the command ps aux in the container you will verify if the nginx is running. 
+If everything happened normally you can access your browser http://<IP-ADDRESS>:8080.
+You should access the page of welcome to nginx.
+
+
 
 ## References
 
