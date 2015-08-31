@@ -273,6 +273,7 @@ With the command ps aux in the container you will verify if the nginx is running
 If everything happened normally you can access your browser http://<IP-ADDRESS>:8080.
 You should access the page of welcome to nginx.
 
+![alt tag](https://github.com/bugfactory/posts/blob/master/docker-for-beginners/imgs/nginx.png)
 
 
 ## References
